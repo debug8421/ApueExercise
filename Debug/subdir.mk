@@ -6,17 +6,17 @@
 CC_SRCS += \
 ../apue.cc \
 ../exercise_11_5.cc \
-../exercise_11_6.cc
+../exercise_11_6.cc \
 
 OBJS += \
 ./apue.o \
 ./exercise_11_5.o \
-./exercise_11_6.o
+./exercise_11_6.o \
 
 CC_DEPS += \
 ./apue.d \
 ./exercise_11_5.d \
-./exercise_11_6.d
+./exercise_11_6.d \
 
 
 # Each subdirectory must supply rules for building sources it contributes

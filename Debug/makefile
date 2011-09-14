@@ -45,12 +45,14 @@ apue: $(OBJS) $(USER_OBJS)
 	@echo 'Invoking: Cross G++ Linker'
 	g++ -pthread -o"apue_exercise" $(OBJS_EXERCISE) $(USER_OBJS) $(LIBS)
 	g++ -pthread  -o"apue_cond" $(OBJS_COND) $(USER_OBJS) $(LIBS)
+	g++ -o "exercise_14_1" $(OBJS_EXERCISE_14_1) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(C++_DEPS)$(OBJS) $(C_DEPS)$(CC_DEPS)$(CPP_DEPS)$(EXECUTABLES)$(CXX_DEPS)$(C_UPPER_DEPS) apue_exercise apue_cond
+	-$(RM) $(C++_DEPS)$(OBJS) $(C_DEPS)$(CC_DEPS)$(CPP_DEPS)$(EXECUTABLES)$(CXX_DEPS)$(C_UPPER_DEPS) \
+		apue_exercise apue_cond  exercise_14_1\
 	-@echo ' '
 
 .PHONY: all clean dependents
